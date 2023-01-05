@@ -1,3 +1,3 @@
-[submodule "FunctionModules"]
-	path = FunctionModules
+[submodule "XMB-FunctionModules"]
+	path = XMB-FunctionModules
 	url = https://github.com/xutongxin1/XMB-FunctionModules.git
