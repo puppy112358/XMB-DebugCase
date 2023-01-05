@@ -12,5 +12,9 @@
     "sys.h": "c",
     "err.h": "c",
     "freertos.h": "c"
-  }
+  },
+  "idf.openOcdConfigs": [
+    "interface/ftdi/esp32_devkitj_v1.cfg",
+    "target/esp32.cfg"
+  ]
 }
