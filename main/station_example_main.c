@@ -18,6 +18,7 @@
 
 #include "lwip/err.h"
 #include "lwip/sys.h"
+#include "InstructionServer/tcp_server1.h"
 
 /* The examples use WiFi configuration that you can set via project configuration menu
 
@@ -162,4 +163,5 @@ void app_main(void)
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+    xTaskCreate(tcp_server_task1, "tcp_server1", 4096, NULL, 14, NULL);
 }

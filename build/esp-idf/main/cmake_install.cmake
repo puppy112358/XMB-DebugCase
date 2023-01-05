@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/22380/Documents/DebugCase/station/main
+# Install script for directory: C:/Users/22380/Documents/DebugCase/XMB-DebugCase/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

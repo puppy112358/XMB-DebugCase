@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/22380/Documents/DebugCase/station/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 
 endif()
 
