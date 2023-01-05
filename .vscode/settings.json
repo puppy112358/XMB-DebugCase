@@ -10,6 +10,7 @@
     "usbip_server.h": "c",
     "dap_handle.h": "c",
     "sys.h": "c",
-    "err.h": "c"
+    "err.h": "c",
+    "freertos.h": "c"
   }
 }
