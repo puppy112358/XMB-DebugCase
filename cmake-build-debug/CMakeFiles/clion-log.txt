@@ -1,0 +1,21 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\22380\Documents\DebugCase\XMB-DebugCase -B C:\Users\22380\Documents\DebugCase\XMB-DebugCase\cmake-build-debug
+-- Building ESP-IDF components for target esp32
+-- Checking Python dependencies...
+Python requirements are satisfied.
+Constraint file: C:\Users\22380\Desktop\Espressif\espidf.constraints.v5.0.txt
+Requirement files:
+ - C:\Users\22380\esp\esp-idf\tools\requirements\requirements.core.txt
+Python being checked: C:\Users\22380\Desktop\Espressif\python_env\idf5.0_py3.9_env\Scripts\python.exe
+-- Project sdkconfig file C:/Users/22380/Documents/DebugCase/XMB-DebugCase/sdkconfig
+CMake Error at C:/Users/22380/esp/esp-idf/components/xtensa/project_include.cmake:3 (message):
+  Internal error, toolchain has not been set correctly by project (or an
+  invalid CMakeCache.txt file has been generated somehow)
+Call Stack (most recent call first):
+  C:/Users/22380/esp/esp-idf/tools/cmake/build.cmake:380 (include)
+  C:/Users/22380/esp/esp-idf/tools/cmake/build.cmake:599 (__build_process_project_includes)
+  C:/Users/22380/esp/esp-idf/tools/cmake/project.cmake:440 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/cmake-build-debug/CMakeFiles/CMakeOutput.log".

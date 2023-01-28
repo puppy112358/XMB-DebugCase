@@ -4,7 +4,6 @@
 //
 // Documentation: https://docs.platformio.org/page/plus/debugging.html
 // Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
-
 // {
 //     "version": "0.2.0",
 //     "configurations": [
@@ -34,8 +33,56 @@
   "configurations": [
     {
       "type": "espidf",
-      "name": "Launch",
-      "request": "launch"
+      "name": "ESP32 Debug",
+      "request": "launch",
+      "logLevel": 5
+    },
+    {
+      "name": "Debug esp panic",
+      "type": "cppdbg",
+      "request": "launch",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\Users\\22380\\.espressif\\tools\\xtensa-esp-elf-gdb\\11.2_20220823\\xtensa-esp-elf-gdb\\bin\\xtensa-esp32-elf-gdb.exe",
+      "program": "${workspaceFolder}//build//wifi_station.elf",
+      "windows": {
+        "program": "${workspaceFolder}//build//wifi_station.elf"
+      },
+      "cwd": "${workspaceFolder}",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "${config:idf.customExtraPaths}"
+        }
+      ],
+      "setupCommands": [
+        {
+          "text": "target extended-remote :3333",
+        },
+        {
+          "text": "mon reset halt"
+        },
+        {
+          "text": "flushregs"
+        },
+        {
+          "text": "thb app_main"
+        },
+      ],
+      "externalConsole": false,
+      "logging": {
+        "engineLogging": true
+      }
     }
   ]
 }
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     {
+//       "type": "espidf",
+//       "name": "Launch",
+//       "request": "launch",
+//       "logLevel": 5
+//     }
+//   ]
+// }

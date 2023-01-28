@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="app" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="wifi_station" TARGET_NAME="app" CONFIG_NAME="Debug-esp32" version="1" RUN_PATH="$PROJECT_DIR$/cmake-build-debug-esp32/wifi_station.elf">
+    <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="C:\Users\22380\.espressif\tools\openocd-esp32\v0.11.0-esp32-20221026\openocd-esp32\share\openocd\scripts\board\esp32-wrover-kit-3.3v.cfg" reset-type="HALT" download-type="NONE">
+      <debugger kind="GDB">C:\Users\22380\.espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-gdb.exe</debugger>
+    </openocd>
+    <method v="2">
+      <option name="CLION.COMPOUND.BUILD" enabled="true" />
+    </method>
+  </configuration>
+</component>

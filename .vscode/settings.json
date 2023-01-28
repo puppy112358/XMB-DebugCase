@@ -11,10 +11,22 @@
     "dap_handle.h": "c",
     "sys.h": "c",
     "err.h": "c",
-    "freertos.h": "c"
+    "freertos.h": "c",
+    "bps_config.h": "c",
+    "tcp.h": "c",
+    "uart_config.h": "c",
+    "*.ipp": "c",
+    "uart_val.h": "c"
   },
   "idf.openOcdConfigs": [
-    "interface/ftdi/esp32_devkitj_v1.cfg",
-    "target/esp32.cfg"
-  ]
+    "target/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "idf.espAdfPathWin": "C:\\Users\\22380\\.espressif\\esp-adf",
+  "cmake.configureOnOpen": true,
+  "terminal.integrated.bellDuration": 50000,
+  "idf.customExtraVars": {
+    "OPENOCD_SCRIPTS": "C:\\Users\\22380\\.espressif\\tools\\openocd-esp32\\v0.11.0-esp32-20220706/openocd-esp32/share/openocd/scripts",
+    "IDF_CCACHE_ENABLE": "1"
+  },
+  "idf.gitPathWin": "C:\\Users\\22380\\.espressif\\tools\\idf-git\\2.30.1\\cmd\\git.exe"
 }

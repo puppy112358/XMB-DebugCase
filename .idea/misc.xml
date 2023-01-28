@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$" />
+    </sourceRoots>
+  </component>
+  <component name="elmot.OpenOcdPlugin">
+    <option name="openOcdHome" value="C:\Users\22380\.espressif\tools\openocd-esp32\v0.11.0-esp32-20221026\openocd-esp32" />
+    <option name="shippedGdb" value="false" />
+  </component>
 </project>
