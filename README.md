@@ -53,7 +53,7 @@ I (649) wifi: Init static rx buffer num: 10
 I (659) wifi: Init dynamic rx buffer num: 32
 I (759) phy: phy_version: 4180, cb3948e, Sep 12 2019, 16:39:13, 0, 0
 I (769) wifi: mode : sta (30:ae:a4:d9:bc:c4)
-I (769) wifi station: wifi_init_sta finished.
+I (769) wifi station: WifiInitSta finished.
 I (889) wifi: new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
 I (889) wifi: state: init -> auth (b0)
 I (899) wifi: state: auth -> assoc (0)
@@ -86,7 +86,7 @@ I (649) wifi: Init static rx buffer num: 10
 I (659) wifi: Init dynamic rx buffer num: 32
 I (759) phy: phy_version: 4180, cb3948e, Sep 12 2019, 16:39:13, 0, 0
 I (759) wifi: mode : sta (30:ae:a4:d9:bc:c4)
-I (769) wifi station: wifi_init_sta finished.
+I (769) wifi station: WifiInitSta finished.
 I (889) wifi: new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
 I (889) wifi: state: init -> auth (b0)
 I (1889) wifi: state: auth -> init (200)

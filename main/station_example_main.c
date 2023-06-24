@@ -61,8 +61,8 @@ static const char *TAG = "wifi station";
 static int s_retry_num = 0;
 
 
-static void event_handler(void* arg, esp_event_base_t event_base,
-                                int32_t event_id, void* event_data)
+static void EventHandler(void* arg, esp_event_base_t event_base,
+                         int32_t event_id, void* event_data)
 {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
         esp_wifi_connect();
@@ -83,7 +83,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
-void wifi_init_sta(void)
+void WifiInitSta(void)
 {
     s_wifi_event_group = xEventGroupCreate();
 
@@ -99,12 +99,12 @@ void wifi_init_sta(void)
     esp_event_handler_instance_t instance_got_ip;
     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
                                                         ESP_EVENT_ANY_ID,
-                                                        &event_handler,
+                                                        &EventHandler,
                                                         NULL,
                                                         &instance_any_id));
     ESP_ERROR_CHECK(esp_event_handler_instance_register(IP_EVENT,
                                                         IP_EVENT_STA_GOT_IP,
-                                                        &event_handler,
+                                                        &EventHandler,
                                                         NULL,
                                                         &instance_got_ip));
 
@@ -123,10 +123,10 @@ void wifi_init_sta(void)
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config) );
     ESP_ERROR_CHECK(esp_wifi_start() );
 
-    ESP_LOGI(TAG, "wifi_init_sta finished.");
+    ESP_LOGI(TAG, "WifiInitSta finished.");
 
     /* Waiting until either the connection is established (WIFI_CONNECTED_BIT) or connection failed for the maximum
-     * number of re-tries (WIFI_FAIL_BIT). The bits are set by event_handler() (see above) */
+     * number of re-tries (WIFI_FAIL_BIT). The bits are set by EventHandler() (see above) */
     EventBits_t bits = xEventGroupWaitBits(s_wifi_event_group,
             WIFI_CONNECTED_BIT | WIFI_FAIL_BIT,
             pdFALSE,
@@ -162,6 +162,6 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
-    wifi_init_sta();
-    xTaskCreate(tcp_server_task1, "tcp_server1", 4096, NULL, 14, NULL);
+    WifiInitSta();
+    xTaskCreate();//todo: 参数没有填充完整
 }

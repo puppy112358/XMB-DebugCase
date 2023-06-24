@@ -4,16 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/22380/esp/esp-idf/components/bootloader/subproject"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix/tmp"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix/src"
-  "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/86180/esp/esp-idf/components/bootloader/subproject"
+  "C:/GitProject/XMB-DebugCase/build/bootloader"
+  "C:/GitProject/XMB-DebugCase/build/bootloader-prefix"
+  "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/tmp"
+  "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/src"
+  "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/22380/Documents/DebugCase/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
+if(cfgdir)
+  file(MAKE_DIRECTORY "C:/GitProject/XMB-DebugCase/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+endif()
